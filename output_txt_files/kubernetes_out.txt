@@ -1,0 +1,27 @@
+Cletuss-MBP:project-ml-microservice-kubernetes cletrezo$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+
+Cletuss-MBP:project-ml-microservice-kubernetes cletrezo$ kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+mlpod-66b7579d9b-88v9j   1/1     Running   0          37m
+Cletuss-MBP:project-ml-microservice-kubernetes cletrezo$ vim run_kubernetes.sh 
+Cletuss-MBP:project-ml-microservice-kubernetes cletrezo$ ./run_kubernetes.sh 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+Error from server (AlreadyExists): deployments.apps "mlpod" already exists
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
